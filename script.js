@@ -28,7 +28,7 @@ function mostrarDatosClima(data){
 
     switch (descripcion) {
         case 'clear sky':
-            descripcion = 'cielo claro';
+            descripcion = 'Cielo despejado';
             break;
         case 'few clouds':
             descripcion = 'Parcialmente nublado';
@@ -37,7 +37,7 @@ function mostrarDatosClima(data){
             descripcion = 'Nubes dispersas';
             break;
         case 'broken clouds':
-            descripcion = 'Llovizna ligera';
+            descripcion = 'Nublado';
             break;
         case 'shower rain':
             descripcion = 'Diluvio';
@@ -70,7 +70,7 @@ function mostrarDatosClima(data){
     iconoInfo.src =`https://openweathermap.org/img/wn/${icono}@2x.png`
     
     const descriptionInfo = document.createElement('p')
-    descriptionInfo.textContent = descripcion
+    descriptionInfo.textContent = ` ${descripcion} `
 
     divDatosClima.appendChild(ciudadTitulo)
     divDatosClima.appendChild(temperaturaInfo)
